@@ -12,7 +12,9 @@
 
 For me on lubuntu didn't need to install python. Check your linux installation.
 
- ```sudo apt-get install git build-essential gcc pkg-config cmake cmake-curses-gui```
+ ```
+ sudo apt-get install git build-essential gcc pkg-config cmake cmake-curses-gui libxml2 libxml2-dev
+ ```
 
  ### Clone open62541 repository
 
@@ -35,7 +37,9 @@ I wanted to have the full namespace zero. Later we can deceide if we can make it
 Open ccmake for the project
 ```ccmake ..```
 
-Then go down to UA_NAMESPACE_ZERO and change it from REDUCED to FULL (you change it by pressing enter)
+On the build options:
+Go down to *UA_NAMESPACE_ZERO* and change it from *REDUCED* to *FULL* (you change it by pressing enter)
+Go down to *UA_ENABLE_NODESETLOADER* and set it to *ON*
 
 Then press (c) to configure and wait to finish doing the configurations.
 Then press (g) to generate the configuration. 
