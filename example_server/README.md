@@ -1,7 +1,11 @@
+# Prerequisites
+OPC UA open62541 stack must be built and installed in the host machine. 
+See the main project's [README](../README.md)
+
 # Building example
 
 ```
-cd build
+mkdir build && cd build
 cmake ..
 make
 ```
