@@ -20,7 +20,11 @@ For me on lubuntu didn't need to install python. Check your linux installation.
 
  Cloning open62541 repository, first navigate to the directory where you want to clone your repository and run this on terminal
 
-```git clone https://github.com/open62541/open62541.git```
+```
+git clone https://github.com/open62541/open62541.git
+cd open62541/
+git submodule update --init --recursive --remote
+```
 
 ### Building and installing open62541
 
