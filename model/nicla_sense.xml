@@ -10,9 +10,14 @@
     </Models>
     <Aliases>
         <Alias Alias="Boolean">i=1</Alias>
-        <Alias Alias="Double">i=11</Alias>
+        <Alias Alias="Byte">i=3</Alias>
+        <Alias Alias="Int16">i=4</Alias>
+        <Alias Alias="UInt16">i=5</Alias>
+        <Alias Alias="UInt32">i=7</Alias>
+        <Alias Alias="Float">i=10</Alias>
         <Alias Alias="String">i=12</Alias>
         <Alias Alias="DateTime">i=13</Alias>
+        <Alias Alias="Number">i=26</Alias>
         <Alias Alias="Organizes">i=35</Alias>
         <Alias Alias="HasModellingRule">i=37</Alias>
         <Alias Alias="HasTypeDefinition">i=40</Alias>
@@ -26,19 +31,16 @@
     </Aliases>
     <Extensions>
         <Extension>
-            <ua:ModelInfo Tool="UaModeler" Hash="xZ+A/v/B1naG/vaWhLs+hg==" Version="1.6.11"/>
+            <ua:ModelInfo Tool="UaModeler" Hash="Wz/zkVg65MVR6U9vxR6EJA==" Version="1.6.11"/>
         </Extension>
     </Extensions>
-    <UAVariableType DataType="Double" ValueRank="-2" NodeId="ns=1;i=2003" BrowseName="1:NiclaValueType">
+    <UAVariableType DataType="Number" ValueRank="-2" NodeId="ns=1;i=2003" BrowseName="1:NiclaValueType">
         <DisplayName>NiclaValueType</DisplayName>
         <References>
             <Reference ReferenceType="HasProperty">ns=1;i=6100</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6101</Reference>
             <Reference ReferenceType="HasSubtype" IsForward="false">i=15318</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariableType>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=2003" NodeId="ns=1;i=6100" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -82,7 +84,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6028</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5006" NodeId="ns=1;i=6024" BrowseName="1:x" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5006" NodeId="ns=1;i=6024" BrowseName="1:x" AccessLevel="3">
         <DisplayName>x</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -91,9 +93,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6117</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5006</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6024" NodeId="ns=1;i=6036" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -111,7 +110,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6024</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5006" NodeId="ns=1;i=6026" BrowseName="1:y" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5006" NodeId="ns=1;i=6026" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -120,9 +119,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6120</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5006</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6026" NodeId="ns=1;i=6037" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -140,7 +136,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6026</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5006" NodeId="ns=1;i=6028" BrowseName="1:z" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5006" NodeId="ns=1;i=6028" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -149,9 +145,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6123</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5006</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6028" NodeId="ns=1;i=6038" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -185,7 +178,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6077</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6083" BrowseName="1:accuracy" AccessLevel="3">
+    <UAVariable DataType="Byte" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6083" BrowseName="1:accuracy" AccessLevel="3">
         <DisplayName>accuracy</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -194,9 +187,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6091</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6102</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6083" NodeId="ns=1;i=6091" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -214,7 +204,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6083</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6079" BrowseName="1:b_voc_eq" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6079" BrowseName="1:b_voc_eq" AccessLevel="3">
         <DisplayName>b_voc_eq</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -223,9 +213,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6092</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6103</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6079" NodeId="ns=1;i=6092" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -243,7 +230,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6079</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6081" BrowseName="1:co2_eq" AccessLevel="3">
+    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6081" BrowseName="1:co2_eq" AccessLevel="3">
         <DisplayName>co2_eq</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -252,9 +239,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6093</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6104</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6081" NodeId="ns=1;i=6093" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -272,7 +256,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6081</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6089" BrowseName="1:comp_g" AccessLevel="3">
+    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6089" BrowseName="1:comp_g" AccessLevel="3">
         <DisplayName>comp_g</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -281,9 +265,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6094</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6105</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6089" NodeId="ns=1;i=6094" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -301,7 +282,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6089</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6087" BrowseName="1:comp_h" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6087" BrowseName="1:comp_h" AccessLevel="3">
         <DisplayName>comp_h</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -310,9 +291,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6095</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6106</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6087" NodeId="ns=1;i=6095" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -330,7 +308,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6087</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6085" BrowseName="1:comp_t" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6085" BrowseName="1:comp_t" AccessLevel="3">
         <DisplayName>comp_t</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -339,9 +317,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6096</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6107</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6085" NodeId="ns=1;i=6096" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -359,7 +334,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6085</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6075" BrowseName="1:iaq" AccessLevel="3">
+    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6075" BrowseName="1:iaq" AccessLevel="3">
         <DisplayName>iaq</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -368,9 +343,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6108</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6075" NodeId="ns=1;i=6097" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -388,7 +360,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6075</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6077" BrowseName="1:iaq_s" AccessLevel="3">
+    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6077" BrowseName="1:iaq_s" AccessLevel="3">
         <DisplayName>iaq_s</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -397,9 +369,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6109</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6077" NodeId="ns=1;i=6098" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -426,7 +395,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6009</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5004" NodeId="ns=1;i=6009" BrowseName="1:value" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5004" NodeId="ns=1;i=6009" BrowseName="1:value" AccessLevel="3">
         <DisplayName>value</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -435,9 +404,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6116</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5004</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6009" NodeId="ns=1;i=6115" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -466,7 +432,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6022</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5005" NodeId="ns=1;i=6018" BrowseName="1:x" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5005" NodeId="ns=1;i=6018" BrowseName="1:x" AccessLevel="3">
         <DisplayName>x</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -475,9 +441,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6031</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5005</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6018" NodeId="ns=1;i=6025" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -495,7 +458,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6018</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5005" NodeId="ns=1;i=6020" BrowseName="1:y" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5005" NodeId="ns=1;i=6020" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -504,9 +467,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6033</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5005</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6020" NodeId="ns=1;i=6027" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -524,7 +484,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6020</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5005" NodeId="ns=1;i=6022" BrowseName="1:z" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5005" NodeId="ns=1;i=6022" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -533,9 +493,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6035</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5005</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6022" NodeId="ns=1;i=6029" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -562,7 +519,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6005</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=6005" BrowseName="1:value" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=6005" BrowseName="1:value" AccessLevel="3">
         <DisplayName>value</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -571,9 +528,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6011</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6005" NodeId="ns=1;i=6010" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -602,7 +556,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6034</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5007" NodeId="ns=1;i=6030" BrowseName="1:x" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5007" NodeId="ns=1;i=6030" BrowseName="1:x" AccessLevel="3">
         <DisplayName>x</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -611,9 +565,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6119</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5007</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6030" NodeId="ns=1;i=6118" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -631,7 +582,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6030</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5007" NodeId="ns=1;i=6032" BrowseName="1:y" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5007" NodeId="ns=1;i=6032" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -640,9 +591,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6122</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5007</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6032" NodeId="ns=1;i=6121" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -660,7 +608,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6032</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5007" NodeId="ns=1;i=6034" BrowseName="1:z" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5007" NodeId="ns=1;i=6034" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -669,9 +617,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6125</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5007</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6034" NodeId="ns=1;i=6124" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -698,7 +643,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6007</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5003" NodeId="ns=1;i=6007" BrowseName="1:value" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5003" NodeId="ns=1;i=6007" BrowseName="1:value" AccessLevel="3">
         <DisplayName>value</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -707,9 +652,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6114</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5003</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6007" NodeId="ns=1;i=6113" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -739,7 +681,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6052</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=6054" BrowseName="1:w" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=6054" BrowseName="1:w" AccessLevel="3">
         <DisplayName>w</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -748,9 +690,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6099</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5008</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6054" NodeId="ns=1;i=6056" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -768,7 +707,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6054</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=6041" BrowseName="1:x" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=6041" BrowseName="1:x" AccessLevel="3">
         <DisplayName>x</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -777,9 +716,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6110</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5008</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6041" NodeId="ns=1;i=6043" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -797,7 +733,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6041</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=6050" BrowseName="1:y" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=6050" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -806,9 +742,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6111</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5008</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6050" NodeId="ns=1;i=6057" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -826,7 +759,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6050</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=6052" BrowseName="1:z" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=6052" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -835,9 +768,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6112</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5008</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6052" NodeId="ns=1;i=6058" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -864,7 +794,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6003</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5001" NodeId="ns=1;i=6003" BrowseName="1:value" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5001" NodeId="ns=1;i=6003" BrowseName="1:value" AccessLevel="3">
         <DisplayName>value</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
@@ -873,9 +803,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6008</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5001</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6003" NodeId="ns=1;i=6006" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -907,7 +834,7 @@
             <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
         </References>
     </UAObjectType>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6067" BrowseName="1:accuracy" AccessLevel="3">
+    <UAVariable DataType="Byte" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6067" BrowseName="1:accuracy" AccessLevel="3">
         <DisplayName>accuracy</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -916,9 +843,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6068</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6084</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6067" NodeId="ns=1;i=6068" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -936,7 +860,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6067</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6063" BrowseName="1:b_voc_eq" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6063" BrowseName="1:b_voc_eq" AccessLevel="3">
         <DisplayName>b_voc_eq</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -945,9 +869,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6064</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6080</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6063" NodeId="ns=1;i=6064" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -965,7 +886,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6063</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6065" BrowseName="1:co2_eq" AccessLevel="3">
+    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6065" BrowseName="1:co2_eq" AccessLevel="3">
         <DisplayName>co2_eq</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -974,9 +895,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6066</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6082</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6065" NodeId="ns=1;i=6066" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -994,7 +912,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6065</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6073" BrowseName="1:comp_g" AccessLevel="3">
+    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6073" BrowseName="1:comp_g" AccessLevel="3">
         <DisplayName>comp_g</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1003,9 +921,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6074</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6090</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6073" NodeId="ns=1;i=6074" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1023,7 +938,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6073</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6071" BrowseName="1:comp_h" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6071" BrowseName="1:comp_h" AccessLevel="3">
         <DisplayName>comp_h</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1032,9 +947,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6072</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6088</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6071" NodeId="ns=1;i=6072" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1052,7 +964,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6071</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6069" BrowseName="1:comp_t" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6069" BrowseName="1:comp_t" AccessLevel="3">
         <DisplayName>comp_t</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1061,9 +973,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6070</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6086</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6069" NodeId="ns=1;i=6070" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1081,7 +990,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6069</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6059" BrowseName="1:iaq" AccessLevel="3">
+    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6059" BrowseName="1:iaq" AccessLevel="3">
         <DisplayName>iaq</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1090,9 +999,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6076</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1008</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6059" NodeId="ns=1;i=6060" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1110,7 +1016,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6059</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6061" BrowseName="1:iaq_s" AccessLevel="3">
+    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6061" BrowseName="1:iaq_s" AccessLevel="3">
         <DisplayName>iaq_s</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1119,9 +1025,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6078</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1008</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6061" NodeId="ns=1;i=6062" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1149,7 +1052,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6046</Reference>
         </References>
     </UAObjectType>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1004" NodeId="ns=1;i=6048" BrowseName="1:w" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=1004" NodeId="ns=1;i=6048" BrowseName="1:w" AccessLevel="3">
         <DisplayName>w</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1158,9 +1061,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6055</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1004</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6048" NodeId="ns=1;i=6049" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1178,7 +1078,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6048</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1004" NodeId="ns=1;i=6039" BrowseName="1:x" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=1004" NodeId="ns=1;i=6039" BrowseName="1:x" AccessLevel="3">
         <DisplayName>x</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1187,9 +1087,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6042</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1004</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6039" NodeId="ns=1;i=6040" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1207,7 +1104,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6039</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1004" NodeId="ns=1;i=6044" BrowseName="1:y" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=1004" NodeId="ns=1;i=6044" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1216,9 +1113,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6051</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1004</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6044" NodeId="ns=1;i=6045" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1236,7 +1130,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6044</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1004" NodeId="ns=1;i=6046" BrowseName="1:z" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=1004" NodeId="ns=1;i=6046" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1245,9 +1139,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6053</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1004</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6046" NodeId="ns=1;i=6047" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1272,7 +1163,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6001</Reference>
         </References>
     </UAObjectType>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1006" NodeId="ns=1;i=6001" BrowseName="1:value" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=1006" NodeId="ns=1;i=6001" BrowseName="1:value" AccessLevel="3">
         <DisplayName>value</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1281,9 +1172,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6004</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1006</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6001" NodeId="ns=1;i=6002" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1310,7 +1198,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6016</Reference>
         </References>
     </UAObjectType>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1009" NodeId="ns=1;i=6012" BrowseName="1:x" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=1009" NodeId="ns=1;i=6012" BrowseName="1:x" AccessLevel="3">
         <DisplayName>x</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1319,9 +1207,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6019</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1009</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6012" NodeId="ns=1;i=6013" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1339,7 +1224,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6012</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1009" NodeId="ns=1;i=6014" BrowseName="1:y" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=1009" NodeId="ns=1;i=6014" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1348,9 +1233,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6021</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1009</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6014" NodeId="ns=1;i=6015" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1368,7 +1250,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6014</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1009" NodeId="ns=1;i=6016" BrowseName="1:z" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=1009" NodeId="ns=1;i=6016" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1377,9 +1259,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6023</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1009</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6016" NodeId="ns=1;i=6017" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1423,7 +1302,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6139</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5014" NodeId="ns=1;i=6133" BrowseName="1:x" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5014" NodeId="ns=1;i=6133" BrowseName="1:x" AccessLevel="3">
         <DisplayName>x</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1431,9 +1310,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6135</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5014</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6133" NodeId="ns=1;i=6134" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1449,7 +1325,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6133</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5014" NodeId="ns=1;i=6136" BrowseName="1:y" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5014" NodeId="ns=1;i=6136" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1457,9 +1333,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6138</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5014</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6136" NodeId="ns=1;i=6137" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1475,7 +1348,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6136</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5014" NodeId="ns=1;i=6139" BrowseName="1:z" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5014" NodeId="ns=1;i=6139" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1483,9 +1356,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6141</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5014</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6139" NodeId="ns=1;i=6140" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1516,7 +1386,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6163</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6142" BrowseName="1:accuracy" AccessLevel="3">
+    <UAVariable DataType="Byte" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6142" BrowseName="1:accuracy" AccessLevel="3">
         <DisplayName>accuracy</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1524,9 +1394,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6143</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6144</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6142" NodeId="ns=1;i=6143" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1542,7 +1409,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6142</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6145" BrowseName="1:b_voc_eq" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6145" BrowseName="1:b_voc_eq" AccessLevel="3">
         <DisplayName>b_voc_eq</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1550,9 +1417,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6146</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6147</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6145" NodeId="ns=1;i=6146" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1568,7 +1432,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6145</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6148" BrowseName="1:co2_eq" AccessLevel="3">
+    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6148" BrowseName="1:co2_eq" AccessLevel="3">
         <DisplayName>co2_eq</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1576,9 +1440,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6149</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6150</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6148" NodeId="ns=1;i=6149" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1594,7 +1455,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6148</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6151" BrowseName="1:comp_g" AccessLevel="3">
+    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6151" BrowseName="1:comp_g" AccessLevel="3">
         <DisplayName>comp_g</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1602,9 +1463,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6152</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6153</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6151" NodeId="ns=1;i=6152" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1620,7 +1478,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6151</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6154" BrowseName="1:comp_h" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6154" BrowseName="1:comp_h" AccessLevel="3">
         <DisplayName>comp_h</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1628,9 +1486,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6155</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6156</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6154" NodeId="ns=1;i=6155" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1646,7 +1501,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6154</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6157" BrowseName="1:comp_t" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6157" BrowseName="1:comp_t" AccessLevel="3">
         <DisplayName>comp_t</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1654,9 +1509,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6158</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6159</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6157" NodeId="ns=1;i=6158" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1672,7 +1524,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6157</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6160" BrowseName="1:iaq" AccessLevel="3">
+    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6160" BrowseName="1:iaq" AccessLevel="3">
         <DisplayName>iaq</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1680,9 +1532,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6162</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5015</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6160" NodeId="ns=1;i=6161" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1698,7 +1547,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6160</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6163" BrowseName="1:iaq_s" AccessLevel="3">
+    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6163" BrowseName="1:iaq_s" AccessLevel="3">
         <DisplayName>iaq_s</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1706,9 +1555,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6165</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5015</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6163" NodeId="ns=1;i=6164" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1732,7 +1578,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6166</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5016" NodeId="ns=1;i=6166" BrowseName="1:value" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5016" NodeId="ns=1;i=6166" BrowseName="1:value" AccessLevel="3">
         <DisplayName>value</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1740,9 +1586,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6168</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5016</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6166" NodeId="ns=1;i=6167" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1768,7 +1611,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6175</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5017" NodeId="ns=1;i=6169" BrowseName="1:x" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5017" NodeId="ns=1;i=6169" BrowseName="1:x" AccessLevel="3">
         <DisplayName>x</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1776,9 +1619,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6171</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5017</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6169" NodeId="ns=1;i=6170" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1794,7 +1634,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6169</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5017" NodeId="ns=1;i=6172" BrowseName="1:y" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5017" NodeId="ns=1;i=6172" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1802,9 +1642,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6174</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5017</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6172" NodeId="ns=1;i=6173" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1820,7 +1657,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6172</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5017" NodeId="ns=1;i=6175" BrowseName="1:z" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5017" NodeId="ns=1;i=6175" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1828,9 +1665,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6177</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5017</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6175" NodeId="ns=1;i=6176" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1854,7 +1688,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6178</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5018" NodeId="ns=1;i=6178" BrowseName="1:value" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5018" NodeId="ns=1;i=6178" BrowseName="1:value" AccessLevel="3">
         <DisplayName>value</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1862,9 +1696,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6180</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5018</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6178" NodeId="ns=1;i=6179" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1890,7 +1721,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6187</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=6181" BrowseName="1:x" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=6181" BrowseName="1:x" AccessLevel="3">
         <DisplayName>x</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1898,9 +1729,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6183</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5019</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6181" NodeId="ns=1;i=6182" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1916,7 +1744,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6181</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=6184" BrowseName="1:y" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=6184" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1924,9 +1752,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6186</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5019</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6184" NodeId="ns=1;i=6185" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1942,7 +1767,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6184</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=6187" BrowseName="1:z" AccessLevel="3">
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=6187" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1950,9 +1775,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6189</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5019</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6187" NodeId="ns=1;i=6188" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1976,7 +1798,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6190</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5020" NodeId="ns=1;i=6190" BrowseName="1:value" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5020" NodeId="ns=1;i=6190" BrowseName="1:value" AccessLevel="3">
         <DisplayName>value</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1984,9 +1806,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6192</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5020</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6190" NodeId="ns=1;i=6191" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -2013,7 +1832,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6202</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6193" BrowseName="1:w" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6193" BrowseName="1:w" AccessLevel="3">
         <DisplayName>w</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -2021,9 +1840,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6195</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5021</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6193" NodeId="ns=1;i=6194" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -2039,7 +1855,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6193</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6196" BrowseName="1:x" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6196" BrowseName="1:x" AccessLevel="3">
         <DisplayName>x</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -2047,9 +1863,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6198</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5021</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6196" NodeId="ns=1;i=6197" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -2065,7 +1878,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6196</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6199" BrowseName="1:y" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6199" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -2073,9 +1886,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6201</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5021</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6199" NodeId="ns=1;i=6200" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -2091,7 +1901,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6199</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6202" BrowseName="1:z" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6202" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -2099,9 +1909,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6204</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5021</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6202" NodeId="ns=1;i=6203" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -2125,7 +1932,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6205</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5022" NodeId="ns=1;i=6205" BrowseName="1:value" AccessLevel="3">
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5022" NodeId="ns=1;i=6205" BrowseName="1:value" AccessLevel="3">
         <DisplayName>value</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -2133,9 +1940,6 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6207</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5022</Reference>
         </References>
-        <Value>
-            <uax:Double>0</uax:Double>
-        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6205" NodeId="ns=1;i=6206" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
