@@ -28,7 +28,7 @@ typedef struct
 typedef struct
 {
     uint16_t    node_id;
-    uint16_t    value;
+    uint32_t    value;
 } NICLA_SENSOR_UINT32_VALUE_t;
 
 /** @brief Nicla sensor float value object */

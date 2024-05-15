@@ -35,7 +35,7 @@ NICLA_SENSE_BOARD_t  my_nicla_board = {
     .bsec.comp_h.value = 0.0,     // float
 
     // board_bsec_comp_t,6157,Variable
-    .bsec.comp_t.node_id = 6154,
+    .bsec.comp_t.node_id = 6157,
     .bsec.comp_t.value = 0.0,     // float
 
     // board_bsec_iaq,6160,Variable
