@@ -1,21 +1,21 @@
 ###########################
 # UaModeler Project File  #
-# Generated at 16.05.2024 #
+# Generated at 15.05.2024 #
 ###########################
 
-PROJECTNAME = nicla_sense
+PROJECTNAME = test_model
 
 TEMPLATESET = ($TEMPLATES)/modeling/v1_0/t0/modeling.tt2set
 
 MODELS += ($MODELS)/Opc.Ua.NodeSet2.ua \
-    nicla_sense.ua
+    test_model.ua
 
 COLORS = ($MODELS)/Opc.Ua.NodeSet2.ua: #0000ff\
-    nicla_sense.ua: #008000
+    test_model.ua: #008000
 
 OUTPUTPATH = 
 
-GENERATE += nicla_sense.ua
+GENERATE += test_model.ua
 
 NODEACCESSINFOROLES += Administrator \
     SecurityAdmin \
