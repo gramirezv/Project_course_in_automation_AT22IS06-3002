@@ -72,7 +72,7 @@ increaseNiclaValues(void) {
 
 /** @brief Update Nicla Object value */
 static void
-writeNiclaValue(UA_Server *server, uint16_t nodeId, void *__restrict__ p, const UA_DataType *type)
+writeNiclaValue(UA_Server *server, char *nodeId, void *__restrict__ p, const UA_DataType *type)
 {
 
     UA_Variant myVar;
@@ -80,7 +80,7 @@ writeNiclaValue(UA_Server *server, uint16_t nodeId, void *__restrict__ p, const 
 
     UA_Variant_setScalar(&myVar, p, type);
 
-    UA_Server_writeValue(server, UA_NODEID_NUMERIC(2, nodeId), myVar);
+    UA_Server_writeValue(server, UA_NODEID_STRING(2, nodeId), myVar);
 }
 
 /** @brief Update Nicla Board values from interface */

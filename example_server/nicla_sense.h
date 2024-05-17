@@ -3,38 +3,40 @@
 
 #include <stdint.h>
 
+#define NODE_ID_MAX_LENGTH 30
+
 /** @brief Nicla sensor uint8 value object */
 typedef struct
 {
-    uint16_t    node_id;
+    char    node_id[NODE_ID_MAX_LENGTH];
     uint8_t     value;
 } NICLA_SENSOR_UINT8_VALUE_t;
 
 /** @brief Nicla sensor uint16 value object */
 typedef struct
 {
-    uint16_t    node_id;
+    char    node_id[NODE_ID_MAX_LENGTH];
     uint16_t    value;
 } NICLA_SENSOR_UINT16_VALUE_t;
 
 /** @brief Nicla sensor int16 value object */
 typedef struct
 {
-    uint16_t    node_id;
+    char    node_id[NODE_ID_MAX_LENGTH];
     int16_t     value;
 } NICLA_SENSOR_INT16_VALUE_t;
 
 /** @brief Nicla sensor uint32 value object */
 typedef struct
 {
-    uint16_t    node_id;
+    char    node_id[NODE_ID_MAX_LENGTH];
     uint32_t    value;
 } NICLA_SENSOR_UINT32_VALUE_t;
 
 /** @brief Nicla sensor float value object */
 typedef struct
 {
-    uint16_t    node_id;
+    char    node_id[NODE_ID_MAX_LENGTH];
     float       value;
 } NICLA_SENSOR_FLOAT_VALUE_t;
 
@@ -64,7 +66,7 @@ typedef struct
 /** @brief Sensor object */
 typedef struct
 {
-    uint16_t    node_id;
+    char    node_id[NODE_ID_MAX_LENGTH];
     float     value;
 } NICLA_SENSOR_t;
 
