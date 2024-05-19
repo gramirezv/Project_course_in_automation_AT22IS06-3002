@@ -9,7 +9,208 @@
 #include <signal.h>
 #include <stdio.h>
 
+#include <string.h>
+
+#ifdef _WIN32
+#include <windows.h>
+#define SERIAL_PORT "\\\\.\\COM8"
+#else
+#include <fcntl.h>
+#include <unistd.h>
+#include <termios.h>
+#include <errno.h>
+#define SERIAL_PORT "/dev/ttyACM0"
+#endif
+
 #include "nicla_sense.h"
+
+#define MAX_DATA_LENGTH 1024
+#define MAX_TOKENS 25
+
+int read_serial_port(char *buffer, size_t max_len);
+
+#ifdef _WIN32
+int read_serial_port(char *buffer, size_t max_len) {
+    HANDLE hSerial;
+    DCB dcbSerialParams = {0};
+    COMMTIMEOUTS timeouts = {0};
+
+    fprintf(stderr, "Opening serial port...");
+    hSerial = CreateFile(
+                SERIAL_PORT, GENERIC_READ | GENERIC_WRITE, 0, NULL,
+                OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL );
+    if (hSerial == INVALID_HANDLE_VALUE) {
+        fprintf(stderr, "Error\n");
+        return 0;
+    } else {
+        fprintf(stderr, "OK\n");
+    }
+
+    dcbSerialParams.DCBlength = sizeof(dcbSerialParams);
+    if (GetCommState(hSerial, &dcbSerialParams) == 0) {
+        fprintf(stderr, "Error getting device state\n");
+        CloseHandle(hSerial);
+        return 0;
+    }
+
+    dcbSerialParams.BaudRate = CBR_115200;
+    dcbSerialParams.ByteSize = 8;
+    dcbSerialParams.StopBits = ONESTOPBIT;
+    dcbSerialParams.Parity = NOPARITY;
+    if (SetCommState(hSerial, &dcbSerialParams) == 0) {
+        fprintf(stderr, "Error setting device parameters\n");
+        CloseHandle(hSerial);
+        return 0;
+    }
+
+    timeouts.ReadIntervalTimeout = 50;
+    timeouts.ReadTotalTimeoutConstant = 50;
+    timeouts.ReadTotalTimeoutMultiplier = 10;
+    timeouts.WriteTotalTimeoutConstant = 50;
+    timeouts.WriteTotalTimeoutMultiplier = 10;
+    if (SetCommTimeouts(hSerial, &timeouts) == 0) {
+        fprintf(stderr, "Error setting timeouts\n");
+        CloseHandle(hSerial);
+        return 0;
+    }
+
+    // Flush any existing data in the buffer
+    PurgeComm(hSerial, PURGE_RXCLEAR | PURGE_TXCLEAR);
+
+    DWORD dwBytesRead = 0;
+    char c;
+    int idx = 0;
+    int found_newline = 0;
+
+    // Read until we encounter a newline character indicating start of data
+    while (!found_newline && ReadFile(hSerial, &c, 1, &dwBytesRead, NULL) && dwBytesRead == 1) {
+        if (c == '\n') {
+            found_newline = 1;
+        }
+    }
+
+    // Now read the actual data line
+    if (found_newline) {
+        idx = 0;
+        while (idx < max_len && ReadFile(hSerial, &c, 1, &dwBytesRead, NULL) && dwBytesRead == 1) {
+            buffer[idx++] = c;
+            if (c == '\n') {
+                break;
+            }
+        }
+        buffer[idx] = '\0'; // Null-terminate the string
+    }
+
+    fprintf(stderr, "Closing serial port...");
+    if (CloseHandle(hSerial) == 0) {
+        fprintf(stderr, "Error\n");
+        return 0;
+    }
+    fprintf(stderr, "OK\n");
+
+    return (idx > 0) ? 1 : 0;
+}
+
+#else
+int read_serial_port(char *buffer, size_t max_len) {
+    int serial_port = open(SERIAL_PORT, O_RDWR | O_NOCTTY | O_SYNC);
+    // int serial_port = open(SERIAL_PORT, O_RDWR);
+    if (serial_port < 0) {
+        fprintf(stderr, "Error %i from open: %s\n", errno, strerror(errno));
+        return 0;
+    }
+
+    struct termios tty;
+    memset(&tty, 0, sizeof tty);
+
+    if (tcgetattr(serial_port, &tty) != 0) {
+        fprintf(stderr, "Error %i from tcgetattr: %s\n", errno, strerror(errno));
+        close(serial_port);
+        return 0;
+    }
+
+    tty.c_cflag &= ~PARENB;
+    tty.c_cflag &= ~CSIZE;
+    tty.c_cflag |= CS8;
+    // tty.c_cflag = (tty.c_cflag & ~CSIZE) | CS8;
+    // tty.c_iflag &= ~IGNBRK;
+    // tty.c_lflag = 0;
+    // tty.c_oflag = 0;
+    tty.c_cc[VMIN]  = 0;
+    tty.c_cc[VTIME] = 0;
+    //
+    // tty.c_iflag &= ~(IXON | IXOFF | IXANY);
+    tty.c_iflag &= ~(IXON | IXOFF | IXANY); // Turn off s/w flow ctrl
+    //
+    // tty.c_cflag |= (CLOCAL | CREAD);
+    tty.c_cflag |= CREAD | CLOCAL;
+    // tty.c_cflag &= ~(PARENB | PARODD);
+    tty.c_cflag &= ~CSTOPB;
+    tty.c_cflag &= ~CRTSCTS;
+
+    tty.c_lflag &= ~ECHO; // Disable echo
+    tty.c_lflag &= ~ECHOE; // Disable erasure
+    tty.c_lflag &= ~ECHONL; // Disable new-line echo
+
+    tty.c_lflag &= ~ISIG; // Disable interpretation of INTR, QUIT and SUSP
+
+    tty.c_iflag &= ~(IGNBRK|BRKINT|PARMRK|ISTRIP|INLCR|IGNCR|ICRNL); // Disable any special handling of received bytes
+
+    tty.c_oflag &= ~OPOST; // Prevent special interpretation of output bytes (e.g. newline chars)
+    tty.c_oflag &= ~ONLCR; // Prevent conversion of newline to carriage return/line feed
+
+    // Set in/out baud rate to be 460800
+    cfsetispeed(&tty, B460800);
+    cfsetospeed(&tty, B460800);
+
+    // same but 1 line
+    // cfsetspeed(&tty, B460800);
+
+    // Save tty settings, also checking for error
+    if (tcsetattr(serial_port, TCSANOW, &tty) != 0) {
+        fprintf(stderr, "Error %i from tcsetattr: %s\n", errno, strerror(errno));
+        close(serial_port);
+        return 0;
+    }
+
+    // Flush any existing data in the buffer
+    // tcflush(serial_port, TCIFLUSH);
+
+    char c;
+    int idx = 0;
+    int found_newline = 0;
+
+    // int n = read(serial_port, &buffer, sizeof(buffer));
+    // n is the number of bytes read. n may be 0 if no bytes were received, and can also be negative to signal an error.
+
+    // Read until we encounter a newline character indicating start of data
+    while (!found_newline && read(serial_port, &c, 1) == 1) {
+        if (c == '^') {
+            found_newline = 1;
+        }
+    }
+
+    // Now read the actual data line
+    if (found_newline) {
+        idx = 0;
+        while (idx < max_len && read(serial_port, &c, 1) == 1) {
+            if (c == '|') {
+                break;
+            }
+            if (c == '^') {
+                idx = 0;
+            }
+            buffer[idx++] = c;
+        }
+        buffer[idx] = '\0'; // Null-terminate the string
+    }
+
+    close(serial_port);
+
+    return (idx > 0) ? 1 : 0;
+    // return (n > 0) ? 1 : 0;
+}
+#endif
 
 UA_Double myTempValue = 0.0;
 
@@ -26,48 +227,65 @@ static void stopHandler(int sign)
 static void
 increaseNiclaValues(void) {
 
-    // Accelerometer
-    my_nicla_board.accelerometer.x.value += 25;
-    my_nicla_board.accelerometer.y.value += 25;
-    my_nicla_board.accelerometer.z.value += 25;
+    char buffer[MAX_DATA_LENGTH + 1] = {0};
 
-    // BSEC
-    my_nicla_board.bsec.accuracy.value += 2;
-    my_nicla_board.bsec.b_voc_eq.value += 2.5;
-    my_nicla_board.bsec.co2_eq.value += 25;
-    my_nicla_board.bsec.comp_g.value += 25;
-    my_nicla_board.bsec.comp_h.value += 2.5;
-    my_nicla_board.bsec.comp_t.value += 2.5;
-    my_nicla_board.bsec.iaq.value += 25;
-    my_nicla_board.bsec.iaq_s.value += 25;
+    if (read_serial_port(buffer, MAX_DATA_LENGTH)) {
+        char *tokens[MAX_TOKENS] = {0};
+        int token_count = 0;
+        char *token = strtok(buffer, ",");
+        while (token && token_count < MAX_TOKENS) {
+            tokens[token_count++] = strdup(token);
+            token = strtok(NULL, ",");
+        }
 
-    // Gas
-    my_nicla_board.gas.value += 2.5;
+        if (token_count == 25) {
+            // Temperature
+            my_nicla_board.temperature.value = atof(tokens[0]);
 
-    // Accelerometer
-    my_nicla_board.gyroscope.x.value += 25;
-    my_nicla_board.gyroscope.y.value += 25;
-    my_nicla_board.gyroscope.z.value += 25;
+            // Humidity
+            my_nicla_board.humidity.value = atof(tokens[1]);
 
-    // Humidity
-    my_nicla_board.humidity.value += 2.5;
+            // Pressure
+            my_nicla_board.pressure.value = atof(tokens[2]);
 
-    // Magnetometer
-    my_nicla_board.magnetometer.x.value += 25;
-    my_nicla_board.magnetometer.y.value += 25;
-    my_nicla_board.magnetometer.z.value += 25;
+            // Gas
+            my_nicla_board.gas.value = atof(tokens[3]);
 
-    // Pressure
-    my_nicla_board.pressure.value += 2.5;
+            // Magnetometer
+            my_nicla_board.magnetometer.x.value = atoi(tokens[4]);
+            my_nicla_board.magnetometer.y.value = atoi(tokens[5]);
+            my_nicla_board.magnetometer.z.value = atoi(tokens[6]);
 
-    // Quaternion
-    my_nicla_board.quaternion.w.value += 2.5;
-    my_nicla_board.quaternion.x.value += 2.5;
-    my_nicla_board.quaternion.y.value += 2.5;
-    my_nicla_board.quaternion.z.value += 2.5;
+            // Gyroscope
+            my_nicla_board.gyroscope.x.value = atoi(tokens[7]);
+            my_nicla_board.gyroscope.y.value = atoi(tokens[8]);
+            my_nicla_board.gyroscope.z.value = atoi(tokens[9]);
 
-    // Temperature
-    my_nicla_board.temperature.value += 2.5;
+            // Accelerometer
+            my_nicla_board.accelerometer.x.value = atoi(tokens[10]);
+            my_nicla_board.accelerometer.y.value = atoi(tokens[11]);
+            my_nicla_board.accelerometer.z.value = atoi(tokens[12]);
+
+            // Quaternion
+            my_nicla_board.quaternion.x.value = atof(tokens[13]);
+            my_nicla_board.quaternion.y.value = atof(tokens[14]);
+            my_nicla_board.quaternion.z.value = atof(tokens[15]);
+            my_nicla_board.quaternion.w.value = atof(tokens[16]);
+
+            // BSEC
+            my_nicla_board.bsec.iaq.value = atoi(tokens[17]);
+            my_nicla_board.bsec.iaq_s.value = atoi(tokens[18]);
+            my_nicla_board.bsec.b_voc_eq.value = atof(tokens[19]);
+            my_nicla_board.bsec.co2_eq.value = atoi(tokens[20]);
+            my_nicla_board.bsec.accuracy.value = atoi(tokens[21]);
+            my_nicla_board.bsec.comp_g.value = atoi(tokens[22]);
+            my_nicla_board.bsec.comp_h.value = atof(tokens[23]);
+            my_nicla_board.bsec.comp_t.value = atof(tokens[24]);
+
+        }
+    } else {
+        fprintf(stderr, "No data received or incomplete data\n");
+    }
 }
 
 /** @brief Update Nicla Object value */
@@ -152,7 +370,7 @@ int main(int argc, const char *argv[])
     }
 
     /* Add a repeated callback to the server  to write temperature value */
-    UA_Server_addRepeatedCallback(server, updateValuesFromNicla, NULL, 2000, NULL); /* call every 2 sec */
+    UA_Server_addRepeatedCallback(server, updateValuesFromNicla, NULL, 1000, NULL); /* call every 2 sec */
 
     UA_StatusCode retval = UA_Server_run(server, &running);
     UA_Server_delete(server);
