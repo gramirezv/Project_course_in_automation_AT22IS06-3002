@@ -16,7 +16,7 @@ SensorBSEC bsec(SENSOR_ID_BSEC);
 
 
 unsigned long previousMillis = 0;  // will store last time the sensor was updated
-const long sampling_rate = 1000;   //100ms = 10Hz sampling rate
+const long sampling_rate = 250;   //250ms = 4Hz sampling rate
 
 void setup() {
   Serial.begin(460800);
@@ -53,16 +53,16 @@ void loop() {
   if (currentMillis - previousMillis >= sampling_rate) {
     previousMillis = currentMillis;
     Serial.println(
-        "^" +
-        String(temperature.value())   + "," +
-        String(humidity.value())      + "," +
-        String(pressure.value())      + "," +
-        String(gas.value())           + "," + 
-        String(magnetometer.x())  + "," + String(magnetometer.y())  + "," + String(magnetometer.z())  + "," +
-        String(gyroscope.x())     + "," + String(gyroscope.y())     + "," + String(gyroscope.z())     + "," +
-        String(accelerometer.x()) + "," + String(accelerometer.y()) + "," + String(accelerometer.z()) + "," +
-        String(quaternion.x())    + "," + String(quaternion.y())    + "," + String(quaternion.z())    + "," + String(quaternion.w()) + "," +
-        String(bsec.iaq())        + "," + String(bsec.iaq_s())      + "," + String(bsec.b_voc_eq())   + "," + String(bsec.co2_eq())  + "," + 
-        String(bsec.accuracy())   + "," + String(bsec.comp_g())     + "," + String(bsec.comp_h())     + "," + String(bsec.comp_t()) + "|");
+      String(temperature.value())   + "," +
+      String(humidity.value())      + "," +
+      String(pressure.value())      + "," +
+      String(gas.value())           + "," + 
+      String(magnetometer.x())  + "," + String(magnetometer.y())  + "," + String(magnetometer.z())  + "," +
+      String(gyroscope.x())     + "," + String(gyroscope.y())     + "," + String(gyroscope.z())     + "," +
+      String(accelerometer.x()) + "," + String(accelerometer.y()) + "," + String(accelerometer.z()) + "," +
+      String(quaternion.x())    + "," + String(quaternion.y())    + "," + String(quaternion.z())    + "," + String(quaternion.w()) + "," +
+      String(bsec.iaq())        + "," + String(bsec.iaq_s())      + "," + String(bsec.b_voc_eq())   + "," + String(bsec.co2_eq())  + "," + 
+      String(bsec.accuracy())   + "," + String(bsec.comp_g())     + "," + String(bsec.comp_h())     + "," + String(bsec.comp_t()) 
+    );
   }
 }
