@@ -15,39 +15,39 @@ NICLA_SENSE_BOARD_t  my_nicla_board = {
     .accelerometer.z.value = 0,   // int16
 
     // board_bsec_accuracy
-    .bsec.accuracy.node_id = "bsec.accuracy",
+    .bsec.accuracy.node_id = "airQuality.Accuracy",
     .bsec.accuracy.value = 0,     // uint8, Byte in OPC UA
 
     // board_bsec_b_voc_eq
-    .bsec.b_voc_eq.node_id = "bsec.b_voc_eq",
+    .bsec.b_voc_eq.node_id = "airQuality.BreathVOC",
     .bsec.b_voc_eq.value = 0.0,   // float
 
     // board_bsec_co2_eq
-    .bsec.co2_eq.node_id = "bsec.co2_eq",
+    .bsec.co2_eq.node_id = "airQuality.CO2",
     .bsec.co2_eq.value = 0,       // uint16
 
     // board_bsec_comp_g
-    .bsec.comp_g.node_id = "bsec.comp_g",
+    .bsec.comp_g.node_id = "airQuality.GasResistance_c",
     .bsec.comp_g.value = 0,       // uint16
 
     // board_bsec_comp_h
-    .bsec.comp_h.node_id = "bsec.comp_h",
+    .bsec.comp_h.node_id = "airQuality.Humidity_c",
     .bsec.comp_h.value = 0.0,     // float
 
     // board_bsec_comp_t
-    .bsec.comp_t.node_id = "bsec.comp_t",
+    .bsec.comp_t.node_id = "airQuality.Temperature_c",
     .bsec.comp_t.value = 0.0,     // float
 
     // board_bsec_iaq
-    .bsec.iaq.node_id = "bsec.iaq",
+    .bsec.iaq.node_id = "airQuality.IAQ",
     .bsec.iaq.value = 0,          // unit16
 
     // board_bsec_iaq_s
-    .bsec.iaq_s.node_id = "bsec.iaq_s",
+    .bsec.iaq_s.node_id = "airQuality.IAQstatic",
     .bsec.iaq_s.value = 0,        // uint16
 
     // board_gas_value
-    .gas.node_id = "gas",
+    .gas.node_id = "airPollution",
     .gas.value = 0.0,             //float
     
     // board_gyroscope_x
@@ -79,23 +79,23 @@ NICLA_SENSE_BOARD_t  my_nicla_board = {
     .magnetometer.z.value = 0.0,  // int16
 
     // board_pressure_value
-    .pressure.node_id = "pressure",
+    .pressure.node_id = "barometer",
     .pressure.value = 0.0,        // float
 
     // board_quaternion_w
-    .quaternion.w.node_id = "quaternion.w",
+    .quaternion.w.node_id = "rotationVector.w",
     .quaternion.w.value = 0.0,    // float
 
     // board_quaternion_x
-    .quaternion.x.node_id = "quaternion.x",
+    .quaternion.x.node_id = "rotationVector.x",
     .quaternion.x.value = 0.0,    // float
 
     // board_quaternion_y
-    .quaternion.y.node_id = "quaternion.y",
+    .quaternion.y.node_id = "rotationVector.y",
     .quaternion.y.value = 0.0,    // float
 
     // board_quaternion_z
-    .quaternion.z.node_id = "quaternion.z",
+    .quaternion.z.node_id = "rotationVector.z",
     .quaternion.z.value = 0.0,    // float
 
     // board_temperature_value
