@@ -31,7 +31,7 @@
     </Aliases>
     <Extensions>
         <Extension>
-            <ua:ModelInfo Tool="UaModeler" Hash="+bh5MfHcgMndJsA97eEQEg==" Version="1.6.11"/>
+            <ua:ModelInfo Tool="UaModeler" Hash="UH158qGKJcCwu4qDgjXMSg==" Version="1.6.11"/>
         </Extension>
     </Extensions>
     <UAVariableType DataType="Number" ValueRank="-2" NodeId="ns=1;i=2003" BrowseName="1:NiclaValueType">
@@ -62,19 +62,19 @@
         <DisplayName>NiclaSenseMeType</DisplayName>
         <References>
             <Reference ReferenceType="HasComponent">ns=1;i=5006</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;i=5009</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=5004</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5009</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5003</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=5005</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=5002</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=5007</Reference>
             <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;i=5003</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=5008</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=5001</Reference>
         </References>
     </UAObjectType>
-    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5006" BrowseName="1:accelerometer">
-        <DisplayName>accelerometer</DisplayName>
+    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5006" BrowseName="1:Accelerometer">
+        <DisplayName>Accelerometer</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1009</Reference>
@@ -93,22 +93,57 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6117</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5006</Reference>
         </References>
+        <Value>
+            <uax:Int16>0</uax:Int16>
+        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6024" NodeId="ns=1;i=6036" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6024</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4928560</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>gn</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>standard acceleration of free fall</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6024" NodeId="ns=1;i=6117" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6024</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-8</uax:Low>
+                        <uax:High>8</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5006" NodeId="ns=1;i=6026" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
@@ -123,18 +158,50 @@
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6026" NodeId="ns=1;i=6037" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6026</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4928560</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>gn</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>standard acceleration of free fall</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6026" NodeId="ns=1;i=6120" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6026</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-8</uax:Low>
+                        <uax:High>8</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5006" NodeId="ns=1;i=6028" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
@@ -149,245 +216,53 @@
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6028" NodeId="ns=1;i=6038" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6028</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4928560</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>gn</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>standard acceleration of free fall</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6028" NodeId="ns=1;i=6123" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6028</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-8</uax:Low>
+                        <uax:High>8</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
-    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5009" BrowseName="1:bsec">
-        <DisplayName>bsec</DisplayName>
-        <References>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1008</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;i=6083</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;i=6079</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1003</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;i=6081</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;i=6089</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;i=6087</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;i=6085</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;i=6075</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;i=6077</Reference>
-        </References>
-    </UAObject>
-    <UAVariable DataType="Byte" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6083" BrowseName="1:accuracy" AccessLevel="3">
-        <DisplayName>accuracy</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6091</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6102</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6083" NodeId="ns=1;i=6091" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6083</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6083" NodeId="ns=1;i=6102" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6083</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6079" BrowseName="1:b_voc_eq" AccessLevel="3">
-        <DisplayName>b_voc_eq</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6092</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6103</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6079" NodeId="ns=1;i=6092" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6079</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6079" NodeId="ns=1;i=6103" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6079</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6081" BrowseName="1:co2_eq" AccessLevel="3">
-        <DisplayName>co2_eq</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6093</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6104</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6081" NodeId="ns=1;i=6093" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6081</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6081" NodeId="ns=1;i=6104" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6081</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6089" BrowseName="1:comp_g" AccessLevel="3">
-        <DisplayName>comp_g</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6094</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6105</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6089" NodeId="ns=1;i=6094" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6089</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6089" NodeId="ns=1;i=6105" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6089</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6087" BrowseName="1:comp_h" AccessLevel="3">
-        <DisplayName>comp_h</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6095</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6106</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6087" NodeId="ns=1;i=6095" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6087</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6087" NodeId="ns=1;i=6106" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6087</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6085" BrowseName="1:comp_t" AccessLevel="3">
-        <DisplayName>comp_t</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6096</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6107</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6085" NodeId="ns=1;i=6096" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6085</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6085" NodeId="ns=1;i=6107" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6085</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6075" BrowseName="1:iaq" AccessLevel="3">
-        <DisplayName>iaq</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6097</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6108</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6075" NodeId="ns=1;i=6097" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6075</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6075" NodeId="ns=1;i=6108" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6075</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6077" BrowseName="1:iaq_s" AccessLevel="3">
-        <DisplayName>iaq_s</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6098</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6109</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6077" NodeId="ns=1;i=6098" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6077</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6077" NodeId="ns=1;i=6109" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6077</Reference>
-        </References>
-    </UAVariable>
-    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5004" BrowseName="1:gas">
-        <DisplayName>gas</DisplayName>
+    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5004" BrowseName="1:AirPollution">
+        <DisplayName>AirPollution</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
@@ -408,21 +283,517 @@
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6009" NodeId="ns=1;i=6115" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6009</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>20529</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>%</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>percent</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6009" NodeId="ns=1;i=6116" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6009</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>0</uax:Low>
+                        <uax:High>100</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
-    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5005" BrowseName="1:gyroscope">
-        <DisplayName>gyroscope</DisplayName>
+    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5009" BrowseName="1:AirQuality">
+        <DisplayName>AirQuality</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1008</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6083</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1003</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6079</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6081</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6089</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6087</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6075</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6077</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6085</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Byte" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6083" BrowseName="1:Accuracy" AccessLevel="3">
+        <DisplayName>Accuracy</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6091</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6102</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6083" NodeId="ns=1;i=6091" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6083</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6083" NodeId="ns=1;i=6102" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6083</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>0</uax:Low>
+                        <uax:High>3</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6079" BrowseName="1:BreathVOC" AccessLevel="3">
+        <DisplayName>BreathVOC</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6092</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6103</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6079" NodeId="ns=1;i=6092" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6079</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>13625</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>ppm</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>part per million</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6079" NodeId="ns=1;i=6103" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6079</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6081" BrowseName="1:CO2" AccessLevel="3">
+        <DisplayName>CO2</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6093</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6104</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6081" NodeId="ns=1;i=6093" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6081</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>13625</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>ppm</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>part per million</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6081" NodeId="ns=1;i=6104" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6081</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>400</uax:Low>
+                        <uax:High>0</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6089" BrowseName="1:GasResistance_c" AccessLevel="3">
+        <DisplayName>GasResistance_c</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6094</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6105</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6089" NodeId="ns=1;i=6094" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6089</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>5195853</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>Ω</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>ohm</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6089" NodeId="ns=1;i=6105" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6089</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6087" BrowseName="1:Humidity_c" AccessLevel="3">
+        <DisplayName>Humidity_c</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6095</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6106</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6087" NodeId="ns=1;i=6095" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6087</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>20529</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>%</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>percent</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6087" NodeId="ns=1;i=6106" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6087</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>0</uax:Low>
+                        <uax:High>100</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6075" BrowseName="1:IAQ" AccessLevel="3">
+        <DisplayName>IAQ</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6097</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6108</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6075" NodeId="ns=1;i=6097" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6075</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6075" NodeId="ns=1;i=6108" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6075</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>0</uax:Low>
+                        <uax:High>500</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6077" BrowseName="1:IAQstatic" AccessLevel="3">
+        <DisplayName>IAQstatic</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6098</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6109</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6077" NodeId="ns=1;i=6098" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6077</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6077" NodeId="ns=1;i=6109" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6077</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>0</uax:Low>
+                        <uax:High>1000</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6085" BrowseName="1:Temperature_c" AccessLevel="3">
+        <DisplayName>Temperature_c</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6096</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6107</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6085" NodeId="ns=1;i=6096" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6085</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4408652</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>°C</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>degree Celsius</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6085" NodeId="ns=1;i=6107" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6085</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-40</uax:Low>
+                        <uax:High>85</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5003" BrowseName="1:Barometer">
+        <DisplayName>Barometer</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1003</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6007</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5003" NodeId="ns=1;i=6007" BrowseName="1:value" AccessLevel="3">
+        <DisplayName>value</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6113</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6114</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5003</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6007" NodeId="ns=1;i=6113" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6007</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4274487</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>hPa</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>hectopascal</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6007" NodeId="ns=1;i=6114" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6007</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>300</uax:Low>
+                        <uax:High>1250</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5005" BrowseName="1:Gyroscope">
+        <DisplayName>Gyroscope</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1009</Reference>
@@ -445,18 +816,50 @@
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6018" NodeId="ns=1;i=6025" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6018</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4536630</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>°/s</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>degree per second</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6018" NodeId="ns=1;i=6031" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6018</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-2000</uax:Low>
+                        <uax:High>2000</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5005" NodeId="ns=1;i=6020" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
@@ -471,18 +874,50 @@
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6020" NodeId="ns=1;i=6027" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6020</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4536630</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>°/s</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>degree per second</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6020" NodeId="ns=1;i=6033" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6020</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-2000</uax:Low>
+                        <uax:High>2000</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5005" NodeId="ns=1;i=6022" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
@@ -497,21 +932,53 @@
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6022" NodeId="ns=1;i=6029" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6022</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4536630</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>°/s</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>degree per second</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6022" NodeId="ns=1;i=6035" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6022</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-2000</uax:Low>
+                        <uax:High>2000</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
-    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5002" BrowseName="1:humidity">
-        <DisplayName>humidity</DisplayName>
+    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5002" BrowseName="1:Humidity">
+        <DisplayName>Humidity</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
@@ -532,21 +999,53 @@
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6005" NodeId="ns=1;i=6010" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6005</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>20529</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>%</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>percent</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6005" NodeId="ns=1;i=6011" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6005</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>0</uax:Low>
+                        <uax:High>100</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
-    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5007" BrowseName="1:magnetometer">
-        <DisplayName>magnetometer</DisplayName>
+    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5007" BrowseName="1:Magnetometer">
+        <DisplayName>Magnetometer</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1009</Reference>
@@ -569,18 +1068,50 @@
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6030" NodeId="ns=1;i=6118" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6030</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4470833</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>µT</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>microtesla</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6030" NodeId="ns=1;i=6119" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6030</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-1300</uax:Low>
+                        <uax:High>1300</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5007" NodeId="ns=1;i=6032" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
@@ -595,18 +1126,50 @@
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6032" NodeId="ns=1;i=6121" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6032</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4470833</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>µT</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>microtesla</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6032" NodeId="ns=1;i=6122" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6032</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-1300</uax:Low>
+                        <uax:High>1300</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5007" NodeId="ns=1;i=6034" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
@@ -621,56 +1184,53 @@
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6034" NodeId="ns=1;i=6124" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6034</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4470833</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>µT</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>microtesla</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6034" NodeId="ns=1;i=6125" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6034</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-2500</uax:Low>
+                        <uax:High>2500</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
-    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5003" BrowseName="1:pressure">
-        <DisplayName>pressure</DisplayName>
-        <References>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1003</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;i=6007</Reference>
-        </References>
-    </UAObject>
-    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5003" NodeId="ns=1;i=6007" BrowseName="1:value" AccessLevel="3">
-        <DisplayName>value</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6113</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6114</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5003</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6007" NodeId="ns=1;i=6113" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6007</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6007" NodeId="ns=1;i=6114" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6007</Reference>
-        </References>
-    </UAVariable>
-    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5008" BrowseName="1:quaternion">
-        <DisplayName>quaternion</DisplayName>
+    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5008" BrowseName="1:RotationVector">
+        <DisplayName>RotationVector</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1004</Reference>
@@ -702,10 +1262,23 @@
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6054" NodeId="ns=1;i=6099" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6054</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-1</uax:Low>
+                        <uax:High>1</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Float" ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=6041" BrowseName="1:x" AccessLevel="3">
         <DisplayName>x</DisplayName>
@@ -728,10 +1301,23 @@
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6041" NodeId="ns=1;i=6110" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6041</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-1</uax:Low>
+                        <uax:High>1</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Float" ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=6050" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
@@ -754,10 +1340,23 @@
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6050" NodeId="ns=1;i=6111" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6050</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-1</uax:Low>
+                        <uax:High>1</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Float" ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=6052" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
@@ -780,13 +1379,26 @@
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6052" NodeId="ns=1;i=6112" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6052</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-1</uax:Low>
+                        <uax:High>1</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
-    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5001" BrowseName="1:temperature">
-        <DisplayName>temperature</DisplayName>
+    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5001" BrowseName="1:Temperature">
+        <DisplayName>Temperature</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
@@ -807,18 +1419,50 @@
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6003" NodeId="ns=1;i=6006" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6003</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4408652</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>°C</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>degree Celsius</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6003" NodeId="ns=1;i=6008" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
         <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6003</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-40</uax:Low>
+                        <uax:High>85</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAObjectType NodeId="ns=1;i=1008" BrowseName="1:NiclaSensorBSECType">
         <DisplayName>NiclaSensorBSECType</DisplayName>
@@ -828,14 +1472,14 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6065</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=6073</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=6071</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;i=6069</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=6059</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=6061</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6069</Reference>
             <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
         </References>
     </UAObjectType>
-    <UAVariable DataType="Byte" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6067" BrowseName="1:accuracy" AccessLevel="3">
-        <DisplayName>accuracy</DisplayName>
+    <UAVariable DataType="Byte" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6067" BrowseName="1:Accuracy" AccessLevel="3">
+        <DisplayName>Accuracy</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -860,8 +1504,8 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6067</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Float" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6063" BrowseName="1:b_voc_eq" AccessLevel="3">
-        <DisplayName>b_voc_eq</DisplayName>
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6063" BrowseName="1:BreathVOC" AccessLevel="3">
+        <DisplayName>BreathVOC</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -886,8 +1530,8 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6063</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6065" BrowseName="1:co2_eq" AccessLevel="3">
-        <DisplayName>co2_eq</DisplayName>
+    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6065" BrowseName="1:CO2" AccessLevel="3">
+        <DisplayName>CO2</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -912,14 +1556,14 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6065</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6073" BrowseName="1:comp_g" AccessLevel="3">
-        <DisplayName>comp_g</DisplayName>
+    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6073" BrowseName="1:GasResistance_c" AccessLevel="3">
+        <DisplayName>GasResistance_c</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1008</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6074</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6090</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1008</Reference>
         </References>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6073" NodeId="ns=1;i=6074" BrowseName="EngineeringUnits">
@@ -938,14 +1582,14 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6073</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Float" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6071" BrowseName="1:comp_h" AccessLevel="3">
-        <DisplayName>comp_h</DisplayName>
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6071" BrowseName="1:Humidity_c" AccessLevel="3">
+        <DisplayName>Humidity_c</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1008</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6072</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6088</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1008</Reference>
         </References>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6071" NodeId="ns=1;i=6072" BrowseName="EngineeringUnits">
@@ -964,34 +1608,8 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6071</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Float" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6069" BrowseName="1:comp_t" AccessLevel="3">
-        <DisplayName>comp_t</DisplayName>
-        <References>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1008</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6070</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6086</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6069" NodeId="ns=1;i=6070" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6069</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6069" NodeId="ns=1;i=6086" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasModellingRule">i=78</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6069</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6059" BrowseName="1:iaq" AccessLevel="3">
-        <DisplayName>iaq</DisplayName>
+    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6059" BrowseName="1:IAQ" AccessLevel="3">
+        <DisplayName>IAQ</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1016,8 +1634,8 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6059</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6061" BrowseName="1:iaq_s" AccessLevel="3">
-        <DisplayName>iaq_s</DisplayName>
+    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6061" BrowseName="1:IAQstatic" AccessLevel="3">
+        <DisplayName>IAQstatic</DisplayName>
         <References>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
@@ -1040,6 +1658,32 @@
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6061</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=1008" NodeId="ns=1;i=6069" BrowseName="1:Temperature_c" AccessLevel="3">
+        <DisplayName>Temperature_c</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6070</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6086</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1008</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6069" NodeId="ns=1;i=6070" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6069</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6069" NodeId="ns=1;i=6086" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6069</Reference>
         </References>
     </UAVariable>
     <UAObjectType NodeId="ns=1;i=1004" BrowseName="1:NiclaSensorQuaternionType">
@@ -1281,25 +1925,25 @@
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=5014</Reference>
-            <Reference ReferenceType="Organizes" IsForward="false">i=85</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;i=5015</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=5016</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5015</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5020</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">i=85</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=5017</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=5018</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=5019</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;i=5020</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=5021</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=5022</Reference>
         </References>
     </UAObject>
-    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5014" BrowseName="1:accelerometer">
-        <DisplayName>accelerometer</DisplayName>
+    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5014" BrowseName="1:Accelerometer">
+        <DisplayName>Accelerometer</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1009</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=accelerometer.x</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=accelerometer.y</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=accelerometer.z</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
         </References>
     </UAObject>
     <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5014" NodeId="ns=1;s=accelerometer.x" BrowseName="1:x" AccessLevel="3">
@@ -1310,6 +1954,9 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6135</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5014</Reference>
         </References>
+        <Value>
+            <uax:Int16>0</uax:Int16>
+        </Value>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=accelerometer.x" NodeId="ns=1;i=6134" BrowseName="EngineeringUnits">
         <DisplayName>EngineeringUnits</DisplayName>
@@ -1317,6 +1964,25 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=accelerometer.x</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4928560</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>gn</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>standard acceleration of free fall</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;s=accelerometer.x" NodeId="ns=1;i=6135" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -1324,6 +1990,19 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=accelerometer.x</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-8</uax:Low>
+                        <uax:High>8</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5014" NodeId="ns=1;s=accelerometer.y" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
@@ -1340,6 +2019,25 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=accelerometer.y</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4928560</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>gn</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>standard acceleration of free fall</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;s=accelerometer.y" NodeId="ns=1;i=6138" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -1347,6 +2045,19 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=accelerometer.y</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-8</uax:Low>
+                        <uax:High>8</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5014" NodeId="ns=1;s=accelerometer.z" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
@@ -1363,6 +2074,25 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=accelerometer.z</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4928560</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>gn</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>standard acceleration of free fall</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;s=accelerometer.z" NodeId="ns=1;i=6141" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -1370,24 +2100,100 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=accelerometer.z</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-8</uax:Low>
+                        <uax:High>8</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
-    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5015" BrowseName="1:bsec">
-        <DisplayName>bsec</DisplayName>
+    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5016" BrowseName="1:AirPollution">
+        <DisplayName>AirPollution</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;s=gas</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5016" NodeId="ns=1;s=gas" BrowseName="1:value" AccessLevel="3">
+        <DisplayName>value</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6167</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6168</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5016</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=gas" NodeId="ns=1;i=6167" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gas</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>20529</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>%</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>percent</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;s=gas" NodeId="ns=1;i=6168" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gas</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>0</uax:Low>
+                        <uax:High>100</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5015" BrowseName="1:AirQuality">
+        <DisplayName>AirQuality</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1008</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=bsec.accuracy</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=bsec.b_voc_eq</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=bsec.co2_eq</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=bsec.comp_g</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=bsec.comp_h</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=bsec.comp_t</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=bsec.iaq</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=bsec.iaq_s</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;s=bsec.comp_t</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Byte" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.accuracy" BrowseName="1:accuracy" AccessLevel="3">
-        <DisplayName>accuracy</DisplayName>
+    <UAVariable DataType="Byte" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.accuracy" BrowseName="1:Accuracy" AccessLevel="3">
+        <DisplayName>Accuracy</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5015</Reference>
@@ -1408,9 +2214,22 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=bsec.accuracy</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>0</uax:Low>
+                        <uax:High>3</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
-    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.b_voc_eq" BrowseName="1:b_voc_eq" AccessLevel="3">
-        <DisplayName>b_voc_eq</DisplayName>
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.b_voc_eq" BrowseName="1:BreathVOC" AccessLevel="3">
+        <DisplayName>BreathVOC</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5015</Reference>
@@ -1424,6 +2243,25 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=bsec.b_voc_eq</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>13625</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>ppm</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>part per million</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;s=bsec.b_voc_eq" NodeId="ns=1;i=6147" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -1432,8 +2270,8 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=bsec.b_voc_eq</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.co2_eq" BrowseName="1:co2_eq" AccessLevel="3">
-        <DisplayName>co2_eq</DisplayName>
+    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.co2_eq" BrowseName="1:CO2" AccessLevel="3">
+        <DisplayName>CO2</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5015</Reference>
@@ -1447,6 +2285,25 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=bsec.co2_eq</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>13625</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>ppm</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>part per million</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;s=bsec.co2_eq" NodeId="ns=1;i=6150" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -1454,14 +2311,27 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=bsec.co2_eq</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>400</uax:Low>
+                        <uax:High>0</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
-    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.comp_g" BrowseName="1:comp_g" AccessLevel="3">
-        <DisplayName>comp_g</DisplayName>
+    <UAVariable DataType="UInt32" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.comp_g" BrowseName="1:GasResistance_c" AccessLevel="3">
+        <DisplayName>GasResistance_c</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5015</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6152</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6153</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5015</Reference>
         </References>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=bsec.comp_g" NodeId="ns=1;i=6152" BrowseName="EngineeringUnits">
@@ -1470,6 +2340,25 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=bsec.comp_g</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>5195853</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>Ω</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>ohm</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;s=bsec.comp_g" NodeId="ns=1;i=6153" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -1478,13 +2367,13 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=bsec.comp_g</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.comp_h" BrowseName="1:comp_h" AccessLevel="3">
-        <DisplayName>comp_h</DisplayName>
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.comp_h" BrowseName="1:Humidity_c" AccessLevel="3">
+        <DisplayName>Humidity_c</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5015</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6155</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6156</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5015</Reference>
         </References>
     </UAVariable>
     <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=bsec.comp_h" NodeId="ns=1;i=6155" BrowseName="EngineeringUnits">
@@ -1493,6 +2382,25 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=bsec.comp_h</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>20529</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>%</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>percent</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;s=bsec.comp_h" NodeId="ns=1;i=6156" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -1500,32 +2408,22 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=bsec.comp_h</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>0</uax:Low>
+                        <uax:High>100</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
-    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.comp_t" BrowseName="1:comp_t" AccessLevel="3">
-        <DisplayName>comp_t</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5015</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6158</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6159</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=bsec.comp_t" NodeId="ns=1;i=6158" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=bsec.comp_t</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;s=bsec.comp_t" NodeId="ns=1;i=6159" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=bsec.comp_t</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.iaq" BrowseName="1:iaq" AccessLevel="3">
-        <DisplayName>iaq</DisplayName>
+    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.iaq" BrowseName="1:IAQ" AccessLevel="3">
+        <DisplayName>IAQ</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6161</Reference>
@@ -1546,9 +2444,22 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=bsec.iaq</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>0</uax:Low>
+                        <uax:High>500</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
-    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.iaq_s" BrowseName="1:iaq_s" AccessLevel="3">
-        <DisplayName>iaq_s</DisplayName>
+    <UAVariable DataType="UInt16" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.iaq_s" BrowseName="1:IAQstatic" AccessLevel="3">
+        <DisplayName>IAQstatic</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6164</Reference>
@@ -1569,233 +2480,81 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=bsec.iaq_s</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>0</uax:Low>
+                        <uax:High>1000</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
-    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5016" BrowseName="1:gas">
-        <DisplayName>gas</DisplayName>
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5015" NodeId="ns=1;s=bsec.comp_t" BrowseName="1:Temperature_c" AccessLevel="3">
+        <DisplayName>Temperature_c</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6158</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6159</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5015</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=bsec.comp_t" NodeId="ns=1;i=6158" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=bsec.comp_t</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4408652</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>°C</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>degree Celsius</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;s=bsec.comp_t" NodeId="ns=1;i=6159" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=bsec.comp_t</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-40</uax:Low>
+                        <uax:High>85</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5020" BrowseName="1:Barometer">
+        <DisplayName>Barometer</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=gas</Reference>
-        </References>
-    </UAObject>
-    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5016" NodeId="ns=1;s=gas" BrowseName="1:value" AccessLevel="3">
-        <DisplayName>value</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6167</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6168</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5016</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=gas" NodeId="ns=1;i=6167" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gas</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;s=gas" NodeId="ns=1;i=6168" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gas</Reference>
-        </References>
-    </UAVariable>
-    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5017" BrowseName="1:gyroscope">
-        <DisplayName>gyroscope</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1009</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=gyroscope.x</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=gyroscope.y</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=gyroscope.z</Reference>
-        </References>
-    </UAObject>
-    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5017" NodeId="ns=1;s=gyroscope.x" BrowseName="1:x" AccessLevel="3">
-        <DisplayName>x</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6170</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6171</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5017</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=gyroscope.x" NodeId="ns=1;i=6170" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gyroscope.x</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;s=gyroscope.x" NodeId="ns=1;i=6171" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gyroscope.x</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5017" NodeId="ns=1;s=gyroscope.y" BrowseName="1:y" AccessLevel="3">
-        <DisplayName>y</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6173</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6174</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5017</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=gyroscope.y" NodeId="ns=1;i=6173" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gyroscope.y</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;s=gyroscope.y" NodeId="ns=1;i=6174" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gyroscope.y</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5017" NodeId="ns=1;s=gyroscope.z" BrowseName="1:z" AccessLevel="3">
-        <DisplayName>z</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6176</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6177</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5017</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=gyroscope.z" NodeId="ns=1;i=6176" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gyroscope.z</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;s=gyroscope.z" NodeId="ns=1;i=6177" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gyroscope.z</Reference>
-        </References>
-    </UAVariable>
-    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5018" BrowseName="1:humidity">
-        <DisplayName>humidity</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=humidity</Reference>
-        </References>
-    </UAObject>
-    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5018" NodeId="ns=1;s=humidity" BrowseName="1:value" AccessLevel="3">
-        <DisplayName>value</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6179</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6180</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5018</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=humidity" NodeId="ns=1;i=6179" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=humidity</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;s=humidity" NodeId="ns=1;i=6180" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=humidity</Reference>
-        </References>
-    </UAVariable>
-    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5019" BrowseName="1:magnetometer">
-        <DisplayName>magnetometer</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1009</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=magnetometer.x</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=magnetometer.y</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=magnetometer.z</Reference>
-        </References>
-    </UAObject>
-    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5019" NodeId="ns=1;s=magnetometer.x" BrowseName="1:x" AccessLevel="3">
-        <DisplayName>x</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6182</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6183</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5019</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=magnetometer.x" NodeId="ns=1;i=6182" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=magnetometer.x</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;s=magnetometer.x" NodeId="ns=1;i=6183" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=magnetometer.x</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5019" NodeId="ns=1;s=magnetometer.y" BrowseName="1:y" AccessLevel="3">
-        <DisplayName>y</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6185</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6186</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5019</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=magnetometer.y" NodeId="ns=1;i=6185" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=magnetometer.y</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;s=magnetometer.y" NodeId="ns=1;i=6186" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=magnetometer.y</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5019" NodeId="ns=1;s=magnetometer.z" BrowseName="1:z" AccessLevel="3">
-        <DisplayName>z</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6188</Reference>
-            <Reference ReferenceType="HasProperty">ns=1;i=6189</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5019</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=magnetometer.z" NodeId="ns=1;i=6188" BrowseName="EngineeringUnits">
-        <DisplayName>EngineeringUnits</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=magnetometer.z</Reference>
-        </References>
-    </UAVariable>
-    <UAVariable DataType="Range" ParentNodeId="ns=1;s=magnetometer.z" NodeId="ns=1;i=6189" BrowseName="EURange">
-        <DisplayName>EURange</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=magnetometer.z</Reference>
-        </References>
-    </UAVariable>
-    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5020" BrowseName="1:pressure">
-        <DisplayName>pressure</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=pressure</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
         </References>
     </UAObject>
     <UAVariable DataType="Float" ParentNodeId="ns=1;i=5020" NodeId="ns=1;s=pressure" BrowseName="1:value" AccessLevel="3">
@@ -1813,6 +2572,25 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=pressure</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4274487</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>hPa</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>hectopascal</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;s=pressure" NodeId="ns=1;i=6192" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -1820,16 +2598,442 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=pressure</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>300</uax:Low>
+                        <uax:High>1250</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
-    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5021" BrowseName="1:quaternion">
-        <DisplayName>quaternion</DisplayName>
+    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5017" BrowseName="1:Gyroscope">
+        <DisplayName>Gyroscope</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1009</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;s=gyroscope.x</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;s=gyroscope.y</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;s=gyroscope.z</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5017" NodeId="ns=1;s=gyroscope.x" BrowseName="1:x" AccessLevel="3">
+        <DisplayName>x</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6170</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6171</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5017</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=gyroscope.x" NodeId="ns=1;i=6170" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gyroscope.x</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4536630</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>°/s</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>degree per second</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;s=gyroscope.x" NodeId="ns=1;i=6171" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gyroscope.x</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-2000</uax:Low>
+                        <uax:High>2000</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5017" NodeId="ns=1;s=gyroscope.y" BrowseName="1:y" AccessLevel="3">
+        <DisplayName>y</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6173</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6174</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5017</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=gyroscope.y" NodeId="ns=1;i=6173" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gyroscope.y</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4536630</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>°/s</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>degree per second</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;s=gyroscope.y" NodeId="ns=1;i=6174" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gyroscope.y</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-2000</uax:Low>
+                        <uax:High>2000</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5017" NodeId="ns=1;s=gyroscope.z" BrowseName="1:z" AccessLevel="3">
+        <DisplayName>z</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6176</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6177</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5017</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=gyroscope.z" NodeId="ns=1;i=6176" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gyroscope.z</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4536630</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>°/s</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>degree per second</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;s=gyroscope.z" NodeId="ns=1;i=6177" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=gyroscope.z</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-2000</uax:Low>
+                        <uax:High>2000</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5018" BrowseName="1:Humidity">
+        <DisplayName>Humidity</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;s=humidity</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Float" ParentNodeId="ns=1;i=5018" NodeId="ns=1;s=humidity" BrowseName="1:value" AccessLevel="3">
+        <DisplayName>value</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6179</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6180</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5018</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=humidity" NodeId="ns=1;i=6179" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=humidity</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>20529</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>%</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>percent</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;s=humidity" NodeId="ns=1;i=6180" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=humidity</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>0</uax:Low>
+                        <uax:High>100</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5019" BrowseName="1:Magnetometer">
+        <DisplayName>Magnetometer</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1009</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;s=magnetometer.x</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;s=magnetometer.y</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;s=magnetometer.z</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5019" NodeId="ns=1;s=magnetometer.x" BrowseName="1:x" AccessLevel="3">
+        <DisplayName>x</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6182</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6183</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5019</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=magnetometer.x" NodeId="ns=1;i=6182" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=magnetometer.x</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4470833</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>µT</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>microtesla</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;s=magnetometer.x" NodeId="ns=1;i=6183" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=magnetometer.x</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-1300</uax:Low>
+                        <uax:High>1300</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5019" NodeId="ns=1;s=magnetometer.y" BrowseName="1:y" AccessLevel="3">
+        <DisplayName>y</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6185</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6186</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5019</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=magnetometer.y" NodeId="ns=1;i=6185" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=magnetometer.y</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4470833</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>µT</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>microtesla</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;s=magnetometer.y" NodeId="ns=1;i=6186" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=magnetometer.y</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-1300</uax:Low>
+                        <uax:High>1300</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=5019" NodeId="ns=1;s=magnetometer.z" BrowseName="1:z" AccessLevel="3">
+        <DisplayName>z</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6188</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6189</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5019</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;s=magnetometer.z" NodeId="ns=1;i=6188" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=magnetometer.z</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4470833</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>µT</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>microtesla</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;s=magnetometer.z" NodeId="ns=1;i=6189" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=magnetometer.z</Reference>
+        </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-2500</uax:Low>
+                        <uax:High>2500</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5021" BrowseName="1:RotationVector">
+        <DisplayName>RotationVector</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1004</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=quaternion.w</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=quaternion.x</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=quaternion.y</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=quaternion.z</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
         </References>
     </UAObject>
     <UAVariable DataType="Float" ParentNodeId="ns=1;i=5021" NodeId="ns=1;s=quaternion.w" BrowseName="1:w" AccessLevel="3">
@@ -1854,6 +3058,19 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=quaternion.w</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-1</uax:Low>
+                        <uax:High>1</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Float" ParentNodeId="ns=1;i=5021" NodeId="ns=1;s=quaternion.x" BrowseName="1:x" AccessLevel="3">
         <DisplayName>x</DisplayName>
@@ -1877,6 +3094,19 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=quaternion.x</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-1</uax:Low>
+                        <uax:High>1</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Float" ParentNodeId="ns=1;i=5021" NodeId="ns=1;s=quaternion.y" BrowseName="1:y" AccessLevel="3">
         <DisplayName>y</DisplayName>
@@ -1900,6 +3130,19 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=quaternion.y</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-1</uax:Low>
+                        <uax:High>1</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Float" ParentNodeId="ns=1;i=5021" NodeId="ns=1;s=quaternion.z" BrowseName="1:z" AccessLevel="3">
         <DisplayName>z</DisplayName>
@@ -1923,13 +3166,26 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=quaternion.z</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-1</uax:Low>
+                        <uax:High>1</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
-    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5022" BrowseName="1:temperature">
-        <DisplayName>temperature</DisplayName>
+    <UAObject ParentNodeId="ns=1;s=board" NodeId="ns=1;i=5022" BrowseName="1:Temperature">
+        <DisplayName>Temperature</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
             <Reference ReferenceType="HasComponent">ns=1;s=temperature</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=board</Reference>
         </References>
     </UAObject>
     <UAVariable DataType="Float" ParentNodeId="ns=1;i=5022" NodeId="ns=1;s=temperature" BrowseName="1:value" AccessLevel="3">
@@ -1947,6 +3203,25 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=temperature</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=888</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:EUInformation>
+                        <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
+                        <uax:UnitId>4408652</uax:UnitId>
+                        <uax:DisplayName>
+                            <uax:Text>°C</uax:Text>
+                        </uax:DisplayName>
+                        <uax:Description>
+                            <uax:Text>degree Celsius</uax:Text>
+                        </uax:Description>
+                    </uax:EUInformation>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;s=temperature" NodeId="ns=1;i=6207" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -1954,6 +3229,19 @@
             <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;s=temperature</Reference>
         </References>
+        <Value>
+            <uax:ExtensionObject>
+                <uax:TypeId>
+                    <uax:Identifier>i=885</uax:Identifier>
+                </uax:TypeId>
+                <uax:Body>
+                    <uax:Range>
+                        <uax:Low>-40</uax:Low>
+                        <uax:High>85</uax:High>
+                    </uax:Range>
+                </uax:Body>
+            </uax:ExtensionObject>
+        </Value>
     </UAVariable>
     <UAObject SymbolicName="http___Novia_AutomationTechnology_nicla_sense_" NodeId="ns=1;i=5010" BrowseName="1:http://Novia_AutomationTechnology/nicla_sense/">
         <DisplayName>http://Novia_AutomationTechnology/nicla_sense/</DisplayName>
