@@ -5,7 +5,7 @@
     </NamespaceUris>
     <Models>
         <Model ModelUri="http://Novia_AutomationTechnology/nicla_sense/" PublicationDate="2024-05-16T19:17:57Z" Version="1.0.0">
-            <RequiredModel ModelUri="http://opcfoundation.org/UA/" PublicationDate="2022-11-01T00:00:00Z" Version="1.05.02"/>
+            <RequiredModel ModelUri="http://opcfoundation.org/UA/" PublicationDate="2023-12-15T00:00:00Z" Version="1.05.03"/>
         </Model>
     </Models>
     <Aliases>
@@ -31,7 +31,7 @@
     </Aliases>
     <Extensions>
         <Extension>
-            <ua:ModelInfo Tool="UaModeler" Hash="UH158qGKJcCwu4qDgjXMSg==" Version="1.6.11"/>
+            <ua:ModelInfo Tool="UaModeler" Hash="prFOq6WqnUfvNA8glHEV0g==" Version="1.6.12"/>
         </Extension>
     </Extensions>
     <UAVariableType DataType="Number" ValueRank="-2" NodeId="ns=1;i=2003" BrowseName="1:NiclaValueType">
@@ -2580,12 +2580,12 @@
                 <uax:Body>
                     <uax:EUInformation>
                         <uax:NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</uax:NamespaceUri>
-                        <uax:UnitId>4274487</uax:UnitId>
+                        <uax:UnitId>5259596</uax:UnitId>
                         <uax:DisplayName>
-                            <uax:Text>hPa</uax:Text>
+                            <uax:Text>Pa</uax:Text>
                         </uax:DisplayName>
                         <uax:Description>
-                            <uax:Text>hectopascal</uax:Text>
+                            <uax:Text>pascal</uax:Text>
                         </uax:Description>
                     </uax:EUInformation>
                 </uax:Body>
